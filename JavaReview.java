@@ -331,7 +331,33 @@ public class JavaReview {
         /* Access a stored Element */
         String stored = stringTwoDArray[0][0];
         System.out.println("Element stored instringTwoDArray[0][0]: " + stored);
-        /* Store the number of subArrays in a 2d Array */
+        /*
+         * Store the number of subArrays in a 2d Array
+         * A subarray is like this { "working", "with" } in out stringTwoDArray
+         * AKA Number of rows
+         */
+        int numSubarrays = stringTwoDArray.length;
+        int rows = numSubarrays;
+        /*
+         * Store the number of elements inside a subarray.
+         * AKA Number of coulumns
+         */
+        int subArrayLength = stringTwoDArray[0].length;
+        int columns = subArrayLength;
+        /* How to iterate through a 2d array */
+        for (int i = 0; i < rows; i++) {
+            for (int k = 0; k < columns; k++) {
+                System.out.println(stringTwoDArray[i][k]);
+            }
+        }
+        /* How to add values to an empty 2d array */
+        Random rand = new Random();
+        for (int i = 0; i < rows; i++) {
+            for (int k = 0; k < columns; k++) {
+                intTwoDArray[i][k] = rand.nextInt(100);
+                System.out.println("The number in index intTwoDArray[" + i + "][" + k + "] is : " + intTwoDArray[i][k]);
+            }
+        }
 
     }
 
