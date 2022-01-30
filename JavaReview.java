@@ -322,6 +322,16 @@ public class JavaReview {
     }
 
     public void twoDementionalArray() {
+        /* Declaring a 2dArray */
+        int[][] intTwoDArray;
+        /* Initializing an empty 2dArray */
+        intTwoDArray = new int[3][5];
+        /* Declaring and initializing an 2dArray with vaules */
+        String[][] stringTwoDArray = new String[][] { { "working", "with" }, { "2D", "arrays" }, { "is", "fun" } };
+        /* Access a stored Element */
+        String stored = stringTwoDArray[0][0];
+        System.out.println("Element stored instringTwoDArray[0][0]: " + stored);
+        /* Store the number of subArrays in a 2d Array */
 
     }
 
@@ -332,6 +342,7 @@ public class JavaReview {
         // review.arrayList();
         // review.conversions();
         // review.stringManipulation();
-        review.fileManipulation();
+        // review.fileManipulation();
+        review.twoDementionalArray();
     }
 }
