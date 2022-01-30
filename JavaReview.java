@@ -327,7 +327,9 @@ public class JavaReview {
         /* Initializing an empty 2dArray */
         intTwoDArray = new int[3][5];
         /* Declaring and initializing an 2dArray with vaules */
-        String[][] stringTwoDArray = new String[][] { { "working", "with" }, { "2D", "arrays" }, { "is", "fun" } };
+        String[][] stringTwoDArray = new String[][] { { "working", "with" },
+                { "2D", "arrays" },
+                { "is", "fun" } };
         /* Access a stored Element */
         String stored = stringTwoDArray[0][0];
         System.out.println("Element stored instringTwoDArray[0][0]: " + stored);
@@ -344,10 +346,14 @@ public class JavaReview {
          */
         int subArrayLength = stringTwoDArray[0].length;
         int columns = subArrayLength;
-        /* How to iterate through a 2d array */
+        /*
+         * RowMajor traversing - traverses through row by row instead of column by
+         * column
+         */
         for (int i = 0; i < rows; i++) {
             for (int k = 0; k < columns; k++) {
-                System.out.println(stringTwoDArray[i][k]);
+                System.out.println(
+                        "Row Major print of stringTwoDArray[" + i + "][+" + k + "] is : " + stringTwoDArray[i][k]);
             }
         }
         /* How to add values to an empty 2d array */
@@ -358,6 +364,17 @@ public class JavaReview {
                 System.out.println("The number in index intTwoDArray[" + i + "][" + k + "] is : " + intTwoDArray[i][k]);
             }
         }
+        /*
+         * ColumnMajor traversing-traverses through column by column instead of row by
+         * row
+         */
+        for (int i = 0; i < columns; i++) {
+            for (int k = 0; k < rows; k++) {
+                System.out.println(
+                        "Column major print of stringTwoDArray[" + k + "][+" + i + "] is : " + stringTwoDArray[k][i]);
+            }
+        }
+        /* RowMajor Traversing */
 
     }
 
