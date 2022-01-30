@@ -93,7 +93,52 @@ public class JavaReview {
     }
 
     public void conditionals() {
-
+        Random rand = new Random();
+        int num = rand.nextInt(101);
+        /* if statements */
+        if (num == 1 || num != 2) {
+            System.out.println("Number is equal to 1 or does not equal 2");
+        }
+        if (num <= 10) {
+            System.out.println("Number is less than 10");
+        }
+        if (num >= 10) {
+            System.out.println("Number is greater than 10");
+        }
+        if (num % 10 == 0) {
+            System.out.println("Number is divisable by 10");
+        } else if (num % 5 != 0) {
+            System.out.println("Number is not divisable by 5 without remainder");
+        } else {
+            System.out.println("Got to else statement!!!");
+        }
+        /* Switch case */
+        int day = 4;
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("There is only 7 days in the week");
+        }
     }
 
     public void stringManipulation() {
@@ -374,7 +419,6 @@ public class JavaReview {
                         "Column major print of stringTwoDArray[" + k + "][+" + i + "] is : " + stringTwoDArray[k][i]);
             }
         }
-        /* RowMajor Traversing */
 
     }
 
@@ -386,6 +430,7 @@ public class JavaReview {
         // review.conversions();
         // review.stringManipulation();
         // review.fileManipulation();
-        review.twoDementionalArray();
+        review.conditionals();
+        // review.twoDementionalArray();
     }
 }
