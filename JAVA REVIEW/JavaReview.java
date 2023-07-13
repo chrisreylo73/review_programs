@@ -54,7 +54,7 @@ public class JavaReview {
     /* Declaring and initializing an arraylist of strings */
     ArrayList<String> list1 = new ArrayList<>();
     /* Declaring and initializing an arraylist of multiple data types */
-    ArrayList list2 = new ArrayList<>();
+    ArrayList<Object> list2 = new ArrayList<>();
     /* Adding at item to an arraylist */
     list1.add("hi");
     /* Adding an item to an arraylist at a specific index */
