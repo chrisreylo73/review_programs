@@ -2,12 +2,12 @@ package Algorithms;
 
 import java.util.*;
 
-class GraphAlgorithms {
+class MstAlgorithms {
 
   int V, E;
   int[][] edges;
 
-  GraphAlgorithms(int v, int e) {
+  MstAlgorithms(int v, int e) {
     V = v;
     E = e;
     edges = new int[E][3];
@@ -109,7 +109,7 @@ class GraphAlgorithms {
   public static void main(String[] args) {
     int V = 4; // Number of vertices
     int E = 5; // Number of edges
-    GraphAlgorithms graph = new GraphAlgorithms(V, E);
+    MstAlgorithms graph = new MstAlgorithms(V, E);
 
     // Add edges
     graph.edges[0] = new int[] { 0, 1, 10 };
