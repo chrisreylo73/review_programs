@@ -6,7 +6,9 @@ public class ShortestPathAlgorithms {
 
   private static final int INF = Integer.MAX_VALUE;
 
-  // Dijkstra's Algorithm
+  /**-----------------------------------------------------------------------------------------------------------------------
+   *                                                    Dijkstra's
+   *-----------------------------------------------------------------------------------------------------------------------**/
   public static int[] dijkstra(int[][] graph, int source) {
     int V = graph.length;
     int[] dist = new int[V];
@@ -49,7 +51,10 @@ public class ShortestPathAlgorithms {
     return minIndex;
   }
 
-  // Floyd's Algorithm
+  /**-----------------------------------------------------------------------------------------------------------------------
+   *                                                    Floyd's
+   *-----------------------------------------------------------------------------------------------------------------------**/
+
   public static int[][] floydWarshall(int[][] graph) {
     int V = graph.length;
     int[][] dist = new int[V][V];
@@ -77,6 +82,9 @@ public class ShortestPathAlgorithms {
     return dist;
   }
 
+  /**-----------------------------------------------------------------------------------------------------------------------
+   *                                                    MAIN
+   *-----------------------------------------------------------------------------------------------------------------------**/
   public static void main(String[] args) {
     int[][] graph = {
       { 0, 4, 0, 0, 0, 0, 0, 8, 0 },

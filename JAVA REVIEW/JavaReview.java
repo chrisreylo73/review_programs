@@ -377,6 +377,7 @@ public class JavaReview {
 
     // Accessing Elements
     int firstElement = linkedList.get(0); // Accesses the element at index 0
+    System.out.println(" firstElement: " + firstElement);
 
     // Removing Elements
     linkedList.remove(0); // Removes the element at index 0
@@ -404,12 +405,14 @@ public class JavaReview {
 
     // Checking if an Element Exists
     boolean containsElement = linkedList.contains(10); // Checks if an element exists in the list
+    System.out.println(" containsElement: " + containsElement);
 
     // Clearing the LinkedList
     linkedList.clear(); // Removes all elements from the list
 
     // Checking if the LinkedList is Empty
     boolean isEmpty = linkedList.isEmpty(); // Checks if the list is empty
+    System.out.println(" isEmpty: " + isEmpty);
     /*Implementing a LinkedList:
 
         Implement a LinkedList class from scratch with methods like add, remove, get, and size.
@@ -876,6 +879,7 @@ public class JavaReview {
 
     // Removing Elements from the Queue
     int frontElement = queue.remove(); // Removes and returns the front element from the queue
+    System.out.println(frontElement);
     frontElement = queue.poll(); // Removes and returns the front element from the queue
 
     // Peeking at the Front Element
@@ -883,9 +887,11 @@ public class JavaReview {
 
     // Checking if the Queue is Empty
     boolean isEmpty = queue.isEmpty(); // Checks if the queue is empty
+    System.out.println(isEmpty);
 
     // Retrieving the Size of the Queue
     int size = queue.size(); // Retrieves the number of elements in the queue
+    System.out.println(size);
 
     // Iterating over Elements in the Queue
     for (Integer element : queue) {
@@ -906,6 +912,7 @@ public class JavaReview {
 
     // Checking if an Element Exists in the Queue
     boolean containsElement = queue.contains(20);
+    System.out.println(containsElement);
     /*Implementing a Queue:
 
         Implement a queue from scratch with methods like enqueue(), dequeue(), peek(), and isEmpty().
