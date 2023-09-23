@@ -1,23 +1,17 @@
 // How to run in terminal mode
 // compile
-/*tsc tsReview.ts*/
+/*tsc tsReview.ts or if you have a tsconfig.json file just tsc*/
 // run
 /*node tsReview.js*/
-// import * as fs from 'fs';
+
 console.log('Hello, world! 🙌');
 
-function dataTypes(bool: boolean, a: number, b: number, text: string): void { 
-   
-   // BOOLEAN IF
-
-   if(bool == true) {
-      console.log(`boolean test IF: ${bool}`);
-   }else{
-      console.log(`boolean test ELSE: ${bool}`);
-   }
-
-}
-
+mathOperations();
+stringManipulation();
+conditionals();
+allLoopExamples();
+conversions(42);
+conversions("3.14");
 
 function mathOperations(): void {
    // Basic Arithmetic
@@ -290,7 +284,7 @@ function stringManipulation(): void{
    console.log("\n");
 }
 
-function conditionalExamples(): void {
+function conditionals(): void {
    const number1: number = 10;
    const number2: number = 5;
  
@@ -315,7 +309,7 @@ function conditionalExamples(): void {
      console.log("number1 and number2 are equal");
    }
  
-   // Ternary conditional operator (? :)
+   // Ternary conditionals operator (? :)
    const result: string = number1 > number2 ? "number1 is greater" : "number2 is greater or equal";
    console.log(result);
  
@@ -366,13 +360,6 @@ function conditionalExamples(): void {
      console.log(color);
    }
  
-   // For...in Loop (Iterating Over Object Properties)
-   // console.log("\nFor...in Loop:");
-   // const person = { name: "Alice", age: 30, city: "New York" };
-   // for (const key in person) {
-   //   console.log(`${key}: ${person[key]}`);
-   // }
- 
    // Nested Loops
    console.log("\nNested Loops:");
    for (let i = 1; i <= 3; i++) {
@@ -413,42 +400,41 @@ function conditionalExamples(): void {
    }
  }
 
-//  function readWriteFile(): void {
-//    const inputFilePath: string = 'input.txt';
-//    const outputFilePath: string = 'output.txt';
- 
-//    // Read from a file
-//    fs.readFile(inputFilePath, 'utf8', (err: any, data: string) => {
-//      if (err) {
-//        console.error('Error reading file:', err);
-//        return;
-//      }
- 
-//      console.log('File contents:');
-//      console.log(data);
- 
-//      // Modify the data (e.g., convert to uppercase)
-//      const modifiedData: string = data.toUpperCase();
- 
-//      // Write to a file
-//      fs.writeFile(outputFilePath, modifiedData, 'utf8', (err: any) => {
-//        if (err) {
-//          console.error('Error writing file:', err);
-//          return;
-//        }
- 
-//        console.log('Data written to output.txt');
-//      });
-//    });
-//  }
- 
- // Call the readWriteFile function to read and write files
-//  readWriteFile();
- 
- // Call the allLoopExamples function to see the results
-allLoopExamples();
-conditionalExamples();
-stringManipulation();
-mathOperations();
+ function conversions(input: number | string): void {
+  if (typeof input === 'number') {
+    // Number to String
+    const stringNumber = input.toString();
+    console.log("Number to String:", stringNumber);
 
-dataTypes(true, 2, 4, "Hello");
+    // Number to Binary String
+    const binaryString = input.toString(2);
+    console.log("Number to Binary String:", binaryString);
+
+    // Number to Hexadecimal String
+    const hexString = input.toString(16);
+    console.log("Number to Hexadecimal String:", hexString);
+  } else if (typeof input === 'string') {
+    // String to Number
+    const parsedNumber = parseFloat(input);
+    console.log("String to Number:", parsedNumber);
+
+    // String to Integer (using parseInt)
+    const parsedInteger = parseInt(input, 10);
+    console.log("String to Integer:", parsedInteger);
+
+    // String to Binary Number (convert back to number)
+    const binaryNumber = parseInt(input, 2);
+    console.log("Binary String to Number:", binaryNumber);
+
+    // String to Hexadecimal Number (convert back to number)
+    const hexNumber = parseInt(input, 16);
+    console.log("Hexadecimal String to Number:", hexNumber);
+  } else {
+    console.log("Invalid input type. Please provide a number or a string.");
+  }
+}
+
+
+
+
+
